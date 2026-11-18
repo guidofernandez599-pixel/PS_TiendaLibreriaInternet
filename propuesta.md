@@ -39,7 +39,7 @@ Para completar el proyecto falta lo siguiente:
 
 ## El cliente
 
-**Level Up**, Colquencha. Negocio familiar, en funcionamiento desde 2016. Atiende Internet, Libreria y tambien Tienda de regalos al público y por encargo.
+**Level Up**, Colquencha. Negocio familiar, en funcionamiento desde 2016. Atiende Internet, Libreria y tambien Tienda de regalos al público.
 
 **Cómo trabaja hoy:** El inventario de los productos se anotan en un cuaderno.
 Quien atiende escribe y memoriza los precios uno por uno, pero son muchos.
@@ -221,5 +221,91 @@ El sistema **no** incluye, y en cada caso se indica por qué:
 - **Múltiples sucursales.** Level Up Store cuenta con un único local en Colquencha. 
   El diseño de la base de datos permite escalar a futuro si abren otro punto de venta,
   pero en esta versión se gestiona un solo inventario.
+
+---
+
+## Cronograma de actividades
+
+### Descomposición del trabajo
+
+```
+1. Propuesta
+   1.1 Formulación del problema
+   1.2 Objetivos y justificación
+   1.3 Factibilidad, alcances y límites
+   1.4 Cronograma
+
+2. Análisis
+   2.1 Instrumento de recolección y entrevista
+   2.2 Marco teórico
+   2.3 Requerimientos funcionales y no funcionales
+   2.4 Historias de usuario
+
+3. Construcción
+   3.1 Modelo de datos y base de datos creada
+   3.2 Endpoints de registro y consulta
+   3.3 Frontend conectado al backend
+
+4. Verificación y cierre
+   4.1 Matriz de casos de prueba ejecutada
+   4.2 Respaldo y plan de puesta en producción
+   4.3 Documento final y defensa
+```
+
+### Cronograma
+
+| Semana | Paquete | Entregable |
+|---|---|---|
+| 1 | 1.1 a 1.4 | Propuesta completa **(Lab 1)** |
+| 2 | 2.1 a 2.4 | Marco teórico y requerimientos **(Lab 2)** |
+| 3 | 3.1 a 3.3 | Sistema funcionando con base de datos **(Lab 3)** |
+| 4 | 4.1 a 4.3 | Sistema respaldado y documento final |
+
+
+## Resumen
+
+Level Up Store, negocio familiar de Colquencha en funcionamiento desde 2016
+dedicado a servicios de internet, librería y tienda de regalos, registra su
+inventario y precios en tres cuadernos físicos separados por rubro.
+Durante agosto de 2026 se identificaron 24 productos sin control claro de
+existencias, lo que provoca demoras de entre 3 y 10 minutos por consulta en
+mostrador y hace que 2 de cada 10 clientes se retiren sin comprar.
+
+Este proyecto desarrolla un sistema web de gestión de inventario y reservas
+que permite consultar precios y stock en tiempo real, registrar pedidos
+anticipados y conservar los datos con respaldo. Se construye sobre la pagina web desarrollada en el módulo de Programación Web, migrando los datos
+estáticos en formato JSON hacia una base de datos MySQL y conectándola
+mediante una capa de acceso en PHP.
+
+El funcionamiento se verifica mediante una matriz de casos de prueba que
+cubre el registro, el descuento de stock, las consultas y los casos de
+error. Se espera eliminar las demoras de búsqueda en mostrador y evitar la
+pérdida de registros físicos, como ocurrió en diciembre de 2025 al mojarse
+uno de los cuadernos.
+
+
+## Introducción
+
+El presente documento describe el desarrollo de un sistema web de gestión de
+inventario y reservas para la Tienda Librería Level Up, elaborado como
+proyecto integrador del módulo Proyecto de Software del Programa Académico
+Desconcentrado "Técnico Superior en Informática" de la UMSA, Sede Colquencha.
+
+El proyecto continúa el trabajo iniciado en el módulo de Programación Web,
+donde se construyó y publicó la interfaz web del negocio con su catálogo en
+línea, buscador y bandeja de compras. Aquella primera versión almacenaba
+los productos en archivos estáticos (JSON y JavaScript), lo que permitía
+mostrar el catálogo pero no actualizar el stock ni guardar las reservas
+realizadas por los clientes. Este módulo completa el sistema incorporando
+una base de datos y la lógica de servidor necesaria
+para administrar las existencias y los pedidos en tiempo real.
+
+El documento se organiza en cinco partes. La primera presenta la propuesta:
+el problema, los objetivos, la justificación, el alcance y el cronograma. 
+La segunda desarrolla el marco teórico y la recopilación de información
+mediante entrevistas en la tienda. La tercera detalla el desarrollo:
+requerimientos, historias de usuario, construcción de la base de datos y
+pruebas. La cuarta aborda la puesta en producción, los respaldos y los
+costos operativos. La quinta presenta las conclusiones y recomendaciones.
 
 ---
