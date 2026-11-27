@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración — Level Up Store</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-titulos">
+            <h1>Panel de Administración</h1>
+            <p>Internet Librería Level Up Store · Colquencha</p>
+        </div>
+
+        <div class="acciones-cabecera">
+            <div class="preferencias-barra">
+                <button type="button" id="header-tema-toggle" aria-pressed="false">🌙 Modo oscuro</button>
+                <a href="index.html" class="btn-enlace-nav">← Volver al catálogo</a>
+                <button type="button" id="btn-cerrar-sesion" class="btn-secundario" hidden>Cerrar sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="admin-main">
+        <!-- Vista de inicio de sesión (RNF-07) -->
+        <section id="vista-login" class="admin-card admin-login-card">
+            <h2>Acceso de Administrador</h2>
+            <p>Ingresa con tu usuario y contraseña para gestionar el inventario y las reservas.</p>
+
+            <form id="form-login" class="admin-form">
+                <p>
+                    <label for="login-usuario">Usuario</label>
+                    <input type="text" id="login-usuario" name="usuario" autocomplete="username" required>
+                </p>
+                <p>
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" name="password" autocomplete="current-password" required>
+                </p>
+                <p id="login-error" class="mensaje-estado error" role="alert" hidden></p>
+                <button type="submit" class="btn-primario-admin">Iniciar sesión</button>
+            </form>
+        </section>
+
+        <!-- Vista principal autenticada -->
+        <section id="vista-panel" hidden>
+            <div class="admin-barra-superior">
+                <div>
+                    <p id="admin-saludo" class="admin-saludo"></p>
+                </div>
+                <div class="admin-resumen-hoy" id="resumen-hoy" aria-live="polite">
+                    <span class="resumen-numero" id="conteo-hoy">0</span>
+                    <span class="resumen-etiqueta" id="texto-hoy">Reservas activas para hoy</span>
+                </div>
+            </div>
+
+            <div class="admin-tabs" role="tablist">
+                <button type="button" class="admin-tab activo" data-tab="reservas" role="tab" aria-selected="true">
+                    📋 Reservas
+                </button>
+                <button type="button" class="admin-tab" data-tab="inventario" role="tab" aria-selected="false">
+                    📦 Inventario y Precios
+                </button>
+            </div>
+
+            <!-- Pestaña Reservas (RF-06, RF-07, RF-08, RF-11, RF-12, HU-03, HU-04) -->
+            <div id="tab-reservas" class="admin-tab-contenido">
+                <div class="admin-controles-fila">
+                    <input type="search" id="filtro-reservas-q" placeholder="Buscar por nombre o celular..."
+                        aria-label="Buscar reservas por nombre o celular">
+                    <select id="filtro-reservas-estado" aria-label="Filtrar por estado de reserva">
+                        <option value="activa">Activas (pendientes)</option>
+                        <option value="entregada">Entregadas (historial)</option>
+                        <option value="cancelada">Canceladas (historial)</option>
+                        <option value="todas">Todas</option>
+                    </select>
+                </div>
+
+                <p id="estado-reservas" class="mensaje-estado" role="status" aria-live="polite" hidden></p>
+                <div id="lista-reservas" class="admin-lista-reservas"></div>
+            </div>
+
+            <!-- Pestaña Inventario (RF-09, RF-10, HU-05) -->
+            <div id="tab-inventario" class="admin-tab-contenido" hidden>
+                <details class="admin-card admin-nuevo-producto" open>
+                    <summary>➕ Registrar nuevo artículo en el catálogo</summary>
+                    <form id="form-nuevo-producto" class="admin-form-grid">
+                        <p>
+                            <label for="nuevo-nombre">Nombre del artículo</label>
+                            <input type="text" id="nuevo-nombre" required placeholder="Ej. Cuaderno espiral 100 hojas">
+                        </p>
+                        <p>
+                            <label for="nuevo-categoria">Categoría</label>
+                            <select id="nuevo-categoria" required>
+                                <option value="escolares">Escolares y Papelería</option>
+                                <option value="regalos">Regalos y Novedades</option>
+                                <option value="cosmeticos">Cosméticos y Belleza</option>
+                                <option value="internet">Internet y Servicios</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="nuevo-precio">Precio (Bs)</label>
+                            <input type="number" id="nuevo-precio" step="0.50" min="0.50" required placeholder="15.00">
+                        </p>
+                        <p>
+                            <label for="nuevo-unidad">Unidad de venta</label>
+                            <input type="text" id="nuevo-unidad" required value="unidad" placeholder="unidad, paquete, caja...">
+                        </p>
+                        <p>
+                            <label for="nuevo-stock">Stock inicial</label>
+                            <input type="number" id="nuevo-stock" min="0" required value="10">
+                        </p>
+                        <p>
+                            <label for="nuevo-imagen">Ruta de imagen (opcional)</label>
+                            <input type="text" id="nuevo-imagen" placeholder="imagenes/materiales.jfif">
+                        </p>
+                        <div class="admin-form-acciones">
+                            <button type="submit" class="btn-primario-admin">Guardar producto</button>
+                        </div>
+                    </form>
+                    <p id="estado-nuevo-producto" class="mensaje-estado" role="status" aria-live="polite" hidden></p>
+                </details>
+
+                <div class="admin-controles-fila" style="margin-top: 1.5rem;">
+                    <input type="search" id="filtro-inventario" placeholder="Filtrar productos por nombre o categoría..."
+                        aria-label="Filtrar inventario">
+                </div>
+                <p id="estado-inventario" class="mensaje-estado" role="status" aria-live="polite" hidden></p>
+                <div id="lista-inventario" class="admin-lista-inventario"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="preferencias.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

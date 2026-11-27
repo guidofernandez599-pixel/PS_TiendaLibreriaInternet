@@ -1,0 +1,644 @@
+{
+  "negocio": {
+    "nombre": "Level Up Store",
+    "rubro": "Librería, Internet y Tienda de Regalos",
+    "propietarios": "Bragin Quispe Mamani y Lucy Gladys Fernandez Ajno",
+    "direccion": "Colquencha, cerca de la plaza principal, La Paz - Bolivia",
+    "telefono": "74090398",
+    "coordenadas": {
+      "lat": -16.9388,
+      "lng": -68.2435
+    },
+    "horario": {
+      "dias": "Domingos a Jueves (14:00 - 22:00) | Viernes y Sábados (17:00 - 21:00)"
+    }
+  },
+  "categorias": [
+    "Materiales Escolares y Papelería",
+    "Tienda de Regalos y Novedades",
+    "Cosméticos y Belleza",
+    "Internet y Servicios Digitales"
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Bolígrafos Sabonis punta fina (Azul / Negro / Rojo)",
+      "categoria": "escolares",
+      "precio": 1.5,
+      "unidad": "unidad",
+      "stock": 65,
+      "disponible": true,
+      "imagen": "imagenes/bolisabo.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Bolígrafos Faber-Castell / Pilot / Monami / Orion",
+      "categoria": "escolares",
+      "precio": 2.5,
+      "unidad": "unidad",
+      "stock": 45,
+      "disponible": true,
+      "imagen": "imagenes/bolifabel.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Marcadores Sabonis x12 colores al agua",
+      "categoria": "escolares",
+      "precio": 25.0,
+      "unidad": "estuche",
+      "stock": 15,
+      "disponible": true,
+      "imagen": "imagenes/marcasabo.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Marcadores gruesos de agua y de alcohol (Milcar)",
+      "categoria": "escolares",
+      "precio": 30.0,
+      "unidad": "estuche",
+      "stock": 12,
+      "disponible": true,
+      "imagen": "imagenes/grueso.jpg"
+    },
+    {
+      "id": 5,
+      "nombre": "Marcadores doble punta para dibujo",
+      "categoria": "escolares",
+      "precio": 32.0,
+      "unidad": "estuche",
+      "stock": 10,
+      "disponible": true,
+      "imagen": "imagenes/alcol.jpg"
+    },
+    {
+      "id": 6,
+      "nombre": "Marcadores resaltadores fosforescentes",
+      "categoria": "escolares",
+      "precio": 14.0,
+      "unidad": "paquete",
+      "stock": 18,
+      "disponible": true,
+      "imagen": "imagenes/resarta.jpg"
+    },
+    {
+      "id": 7,
+      "nombre": "Caja de colores Faber-Castell x12",
+      "categoria": "escolares",
+      "precio": 18.0,
+      "unidad": "caja",
+      "stock": 20,
+      "disponible": true,
+      "imagen": "imagenes/colofa.jpg"
+    },
+    {
+      "id": 8,
+      "nombre": "Colores escolares Nataraj / Milcar x12",
+      "categoria": "escolares",
+      "precio": 12.0,
+      "unidad": "caja",
+      "stock": 15,
+      "disponible": true,
+      "imagen": "imagenes/colona.jpg"
+    },
+    {
+      "id": 9,
+      "nombre": "Cuadernos empastados tamaño carta",
+      "categoria": "escolares",
+      "precio": 18.0,
+      "unidad": "unidad",
+      "stock": 30,
+      "disponible": true,
+      "imagen": "imagenes/empasta.jpg"
+    },
+    {
+      "id": 10,
+      "nombre": "Cuadernos empastados tamaño oficio",
+      "categoria": "escolares",
+      "precio": 24.0,
+      "unidad": "unidad",
+      "stock": 16,
+      "disponible": true,
+      "imagen": "imagenes/empastao.jpg"
+    },
+    {
+      "id": 11,
+      "nombre": "Cuadernos normales tamaño cuaderno",
+      "categoria": "escolares",
+      "precio": 10.0,
+      "unidad": "unidad",
+      "stock": 25,
+      "disponible": true,
+      "imagen": "imagenes/cuaderno.jpg"
+    },
+    {
+      "id": 12,
+      "nombre": "Hojas Bond tamaño carta 75g (paquete 500 hjs)",
+      "categoria": "escolares",
+      "precio": 35.0,
+      "unidad": "paquete",
+      "stock": 14,
+      "disponible": true,
+      "imagen": "imagenes/cartan.jpg"
+    },
+    {
+      "id": 13,
+      "nombre": "Hojas Bond tamaño oficio 75g (paquete 500 hjs)",
+      "categoria": "escolares",
+      "precio": 40.0,
+      "unidad": "paquete",
+      "stock": 8,
+      "disponible": true,
+      "imagen": "imagenes/ofi.jpg"
+    },
+    {
+      "id": 14,
+      "nombre": "Hojas de color surtidas (carta y oficio)",
+      "categoria": "escolares",
+      "precio": 0.5,
+      "unidad": "hoja",
+      "stock": 150,
+      "disponible": true,
+      "imagen": "imagenes/hojcolo.jpg"
+    },
+    {
+      "id": 15,
+      "nombre": "Hojas cuadriculadas para carpeta (Líder / ABC)",
+      "categoria": "escolares",
+      "precio": 15.0,
+      "unidad": "paquete",
+      "stock": 22,
+      "disponible": true,
+      "imagen": "imagenes/cuadricar.jpg"
+    },
+    {
+      "id": 16,
+      "nombre": "Hojas Trapper cuadriculadas carta y oficio",
+      "categoria": "escolares",
+      "precio": 16.5,
+      "unidad": "paquete",
+      "stock": 18,
+      "disponible": true,
+      "imagen": "imagenes/traper.jpg"
+    },
+    {
+      "id": 17,
+      "nombre": "Archivadores de palanca tamaño carta y oficio",
+      "categoria": "escolares",
+      "precio": 22.0,
+      "unidad": "unidad",
+      "stock": 15,
+      "disponible": true,
+      "imagen": "imagenes/archi.jpg"
+    },
+    {
+      "id": 18,
+      "nombre": "Tapas de carpeta plásticas y folders color crema",
+      "categoria": "escolares",
+      "precio": 3.5,
+      "unidad": "unidad",
+      "stock": 40,
+      "disponible": true,
+      "imagen": "imagenes/folder.jpg"
+    },
+    {
+      "id": 19,
+      "nombre": "Tapas para anillado (plásticas transparentes/color)",
+      "categoria": "escolares",
+      "precio": 4.0,
+      "unidad": "par",
+      "stock": 0,
+      "disponible": false,
+      "imagen": "imagenes/tapas.jpg"
+    },
+    {
+      "id": 20,
+      "nombre": "Pegamento UHU / Isocola / Merleto / Carpicola",
+      "categoria": "escolares",
+      "precio": 6.0,
+      "unidad": "unidad",
+      "stock": 25,
+      "disponible": true,
+      "imagen": "imagenes/pega.jpg"
+    },
+    {
+      "id": 21,
+      "nombre": "Lápices de grafito HB, 2B y 8B (Faber-Castell)",
+      "categoria": "escolares",
+      "precio": 2.0,
+      "unidad": "unidad",
+      "stock": 50,
+      "disponible": true,
+      "imagen": "imagenes/lapiz.jpg"
+    },
+    {
+      "id": 22,
+      "nombre": "Lápices rojos de chequeo",
+      "categoria": "escolares",
+      "precio": 2.5,
+      "unidad": "unidad",
+      "stock": 30,
+      "disponible": true,
+      "imagen": "imagenes/rojo.jpg"
+    },
+    {
+      "id": 23,
+      "nombre": "Corrector líquido y en cinta Radex",
+      "categoria": "escolares",
+      "precio": 5.0,
+      "unidad": "unidad",
+      "stock": 20,
+      "disponible": true,
+      "imagen": "imagenes/radex.jpg"
+    },
+    {
+      "id": 24,
+      "nombre": "Notas adhesivas de colores (Post-its)",
+      "categoria": "escolares",
+      "precio": 5.0,
+      "unidad": "paquete",
+      "stock": 25,
+      "disponible": true,
+      "imagen": "imagenes/notas.jpg"
+    },
+    {
+      "id": 25,
+      "nombre": "Tijeras escolares punta roma y punta fina",
+      "categoria": "escolares",
+      "precio": 6.5,
+      "unidad": "unidad",
+      "stock": 20,
+      "disponible": true,
+      "imagen": "imagenes/tijeras.jpg"
+    },
+    {
+      "id": 26,
+      "nombre": "Goma de borrar Sabonis y borrador miga de pan",
+      "categoria": "escolares",
+      "precio": 2.0,
+      "unidad": "unidad",
+      "stock": 45,
+      "disponible": true,
+      "imagen": "imagenes/goma.jpg"
+    },
+    {
+      "id": 27,
+      "nombre": "Tajadores metálicos y tajadores con formas",
+      "categoria": "escolares",
+      "precio": 3.5,
+      "unidad": "unidad",
+      "stock": 35,
+      "disponible": true,
+      "imagen": "imagenes/tajador.jpg"
+    },
+    {
+      "id": 28,
+      "nombre": "Papel lustroso, mosaicos, 3D y papel estañado",
+      "categoria": "escolares",
+      "precio": 1.5,
+      "unidad": "pliego",
+      "stock": 60,
+      "disponible": true,
+      "imagen": "imagenes/lustroso.jpg"
+    },
+    {
+      "id": 29,
+      "nombre": "Papel de regalo y papel coreano para ramos",
+      "categoria": "escolares",
+      "precio": 3.0,
+      "unidad": "pliego",
+      "stock": 40,
+      "disponible": true,
+      "imagen": "imagenes/koreano.jpg"
+    },
+    {
+      "id": 30,
+      "nombre": "Clips y sujeta papeles Flips",
+      "categoria": "escolares",
+      "precio": 4.5,
+      "unidad": "caja",
+      "stock": 25,
+      "disponible": true,
+      "imagen": "imagenes/flip.jpg"
+    },
+    {
+      "id": 31,
+      "nombre": "Peluche tierno de Stitch",
+      "categoria": "regalos",
+      "precio": 45.0,
+      "unidad": "unidad",
+      "stock": 6,
+      "disponible": true,
+      "imagen": "imagenes/stich.jpg"
+    },
+    {
+      "id": 32,
+      "nombre": "Peluche de Snoopy clásico",
+      "categoria": "regalos",
+      "precio": 40.0,
+      "unidad": "unidad",
+      "stock": 5,
+      "disponible": true,
+      "imagen": "imagenes/snoopy.jpg"
+    },
+    {
+      "id": 33,
+      "nombre": "Peluche de Capibara con mochilita",
+      "categoria": "regalos",
+      "precio": 48.0,
+      "unidad": "unidad",
+      "stock": 7,
+      "disponible": true,
+      "imagen": "imagenes/capibara.jpg"
+    },
+    {
+      "id": 34,
+      "nombre": "Peluches de Emojis divertidos",
+      "categoria": "regalos",
+      "precio": 25.0,
+      "unidad": "unidad",
+      "stock": 12,
+      "disponible": true,
+      "imagen": "imagenes/emoji.jpg"
+    },
+    {
+      "id": 35,
+      "nombre": "Osos de peluche gigantes con lazo (1 metro)",
+      "categoria": "regalos",
+      "precio": 180.0,
+      "unidad": "unidad",
+      "stock": 3,
+      "disponible": true,
+      "imagen": "imagenes/osogrande.jpg"
+    },
+    {
+      "id": 36,
+      "nombre": "Peluches medianos y pequeños para regalo",
+      "categoria": "regalos",
+      "precio": 20.0,
+      "unidad": "unidad",
+      "stock": 10,
+      "disponible": true,
+      "imagen": "imagenes/osomedi.jpg"
+    },
+    {
+      "id": 37,
+      "nombre": "Portafotos decorativos de madera y vidrio",
+      "categoria": "regalos",
+      "precio": 15.0,
+      "unidad": "unidad",
+      "stock": 8,
+      "disponible": true,
+      "imagen": "imagenes/portafoto.jpg"
+    },
+    {
+      "id": 38,
+      "nombre": "Tomatodos deportivos y juveniles",
+      "categoria": "regalos",
+      "precio": 25.0,
+      "unidad": "unidad",
+      "stock": 14,
+      "disponible": true,
+      "imagen": "imagenes/tomatodo.jpg"
+    },
+    {
+      "id": 39,
+      "nombre": "Tazas decoradas con diseños especiales",
+      "categoria": "regalos",
+      "precio": 20.0,
+      "unidad": "unidad",
+      "stock": 16,
+      "disponible": true,
+      "imagen": "imagenes/tazas.jpg"
+    },
+    {
+      "id": 40,
+      "nombre": "Adornos decorativos para habitación",
+      "categoria": "regalos",
+      "precio": 18.0,
+      "unidad": "unidad",
+      "stock": 9,
+      "disponible": true,
+      "imagen": "imagenes/decora.jpg"
+    },
+    {
+      "id": 41,
+      "nombre": "Billeteras para varón y para dama",
+      "categoria": "regalos",
+      "precio": 30.0,
+      "unidad": "unidad",
+      "stock": 12,
+      "disponible": true,
+      "imagen": "imagenes/bille.jpg"
+    },
+    {
+      "id": 42,
+      "nombre": "Relojes de mesa con formas y despertador",
+      "categoria": "regalos",
+      "precio": 28.0,
+      "unidad": "unidad",
+      "stock": 8,
+      "disponible": true,
+      "imagen": "imagenes/relojmesa.jpg"
+    },
+    {
+      "id": 43,
+      "nombre": "Relojes de mano (digitales y elegantes)",
+      "categoria": "regalos",
+      "precio": 35.0,
+      "unidad": "unidad",
+      "stock": 7,
+      "disponible": true,
+      "imagen": "imagenes/relojmano.jpg"
+    },
+    {
+      "id": 44,
+      "nombre": "Bolas de cristal con nieve y música",
+      "categoria": "regalos",
+      "precio": 45.0,
+      "unidad": "unidad",
+      "stock": 6,
+      "disponible": true,
+      "imagen": "imagenes/bola.jpg"
+    },
+    {
+      "id": 45,
+      "nombre": "Lámparas de mesa con formas decorativas",
+      "categoria": "regalos",
+      "precio": 38.0,
+      "unidad": "unidad",
+      "stock": 8,
+      "disponible": true,
+      "imagen": "imagenes/lampara.jpg"
+    },
+    {
+      "id": 46,
+      "nombre": "Paletas de maquillaje y sombras de ojos",
+      "categoria": "cosmeticos",
+      "precio": 22.0,
+      "unidad": "estuche",
+      "stock": 10,
+      "disponible": true,
+      "imagen": "imagenes/maquillaje.jpg"
+    },
+    {
+      "id": 47,
+      "nombre": "Delineadores de ojos líquidos y en lápiz",
+      "categoria": "cosmeticos",
+      "precio": 10.0,
+      "unidad": "unidad",
+      "stock": 18,
+      "disponible": true,
+      "imagen": "imagenes/delinea.jpg"
+    },
+    {
+      "id": 48,
+      "nombre": "Brillos de colores y bálsamos hidratantes",
+      "categoria": "cosmeticos",
+      "precio": 8.0,
+      "unidad": "unidad",
+      "stock": 25,
+      "disponible": true,
+      "imagen": "imagenes/labios.jpg"
+    },
+    {
+      "id": 49,
+      "nombre": "Perfumes y fragancias seleccionadas",
+      "categoria": "cosmeticos",
+      "precio": 28.0,
+      "unidad": "frasco",
+      "stock": 11,
+      "disponible": true,
+      "imagen": "imagenes/perfumes.jpg"
+    },
+    {
+      "id": 50,
+      "nombre": "Aretes decorativos de fantasía fina",
+      "categoria": "cosmeticos",
+      "precio": 12.0,
+      "unidad": "par",
+      "stock": 20,
+      "disponible": true,
+      "imagen": "imagenes/aretes.jpg"
+    },
+    {
+      "id": 51,
+      "nombre": "Collares elegantes y gargantillas",
+      "categoria": "cosmeticos",
+      "precio": 16.0,
+      "unidad": "unidad",
+      "stock": 14,
+      "disponible": true,
+      "imagen": "imagenes/collares.jpg"
+    },
+    {
+      "id": 52,
+      "nombre": "Collares dúo magnéticos de pareja",
+      "categoria": "cosmeticos",
+      "precio": 35.5,
+      "unidad": "par",
+      "stock": 8,
+      "disponible": true,
+      "imagen": "imagenes/duo.jpg"
+    },
+    {
+      "id": 53,
+      "nombre": "Winchas para cabello decoradas",
+      "categoria": "cosmeticos",
+      "precio": 7.0,
+      "unidad": "unidad",
+      "stock": 20,
+      "disponible": true,
+      "imagen": "imagenes/winchas.jpg"
+    },
+    {
+      "id": 54,
+      "nombre": "Ligas y colettes para cabello (pack)",
+      "categoria": "cosmeticos",
+      "precio": 4.0,
+      "unidad": "paquete",
+      "stock": 35,
+      "disponible": true,
+      "imagen": "imagenes/ligas.jpg"
+    },
+    {
+      "id": 55,
+      "nombre": "1 hora de Internet de alta velocidad",
+      "categoria": "internet",
+      "precio": 2.0,
+      "unidad": "hora",
+      "stock": 15,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 56,
+      "nombre": "PC Gamer 1 hora (videojuegos en red)",
+      "categoria": "internet",
+      "precio": 3.0,
+      "unidad": "hora",
+      "stock": 8,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 57,
+      "nombre": "Impresiones a color (carta y oficio)",
+      "categoria": "internet",
+      "precio": 2.0,
+      "unidad": "hoja",
+      "stock": 100,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 58,
+      "nombre": "Impresiones a blanco y negro",
+      "categoria": "internet",
+      "precio": 1.0,
+      "unidad": "hoja",
+      "stock": 200,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 59,
+      "nombre": "Fotocopias blanco y negro",
+      "categoria": "internet",
+      "precio": 0.5,
+      "unidad": "hoja",
+      "stock": 400,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 60,
+      "nombre": "Fotocopias a full color",
+      "categoria": "internet",
+      "precio": 1.5,
+      "unidad": "hoja",
+      "stock": 150,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 61,
+      "nombre": "Transcripciones de trabajos escolares",
+      "categoria": "internet",
+      "precio": 4.0,
+      "unidad": "hoja",
+      "stock": 50,
+      "disponible": true,
+      "imagen": "imagenes/internet_gaming.jpg"
+    },
+    {
+      "id": 62,
+      "nombre": "Anillados y plastificados de documentos",
+      "categoria": "internet",
+      "precio": 6.0,
+      "unidad": "trabajo",
+      "stock": 20,
+      "disponible": true,
+      "imagen": "imagenes/materiales.jfif"
+    }
+  ]
+}

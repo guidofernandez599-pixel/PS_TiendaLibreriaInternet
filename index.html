@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Librería, internet y tienda de regalos en Colquencha.">
+    <title>Level Up Store</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-titulos">
+            <h1>Level Up Store</h1>
+            <p>Librería, internet y tienda de regalos en Colquencha.</p>
+        </div>
+
+        <!-- Preferencias únicas en la parte superior -->
+        <div class="acciones-cabecera">
+            <div class="preferencias-barra">
+                <button type="button" id="header-tema-toggle" aria-pressed="false">🌙 Modo oscuro</button>
+
+                <div class="control-orden">
+                    <label for="orden">Ordenar:</label>
+                    <select id="orden" aria-label="Ordenar productos">
+                        <option value="nombre">Nombre</option>
+                        <option value="precio">Precio</option>
+                        <option value="stock">Stock</option>
+                    </select>
+                </div>
+
+                <button type="button" id="header-olvidar" title="Restablecer preferencias">Restablecer</button>
+                <span id="estado-prefs" role="status" aria-live="polite"></span>
+            </div>
+
+            <button type="button" id="menu-toggle" aria-expanded="false" aria-controls="menu-movil">
+                ☰ Menú
+            </button>
+        </div>
+
+        <nav id="menu-movil">
+            <ul>
+                <li><a href="#Productos">Catálogo</a></li>
+                <li><a href="#Regalos">Regalos</a></li>
+                <li><a href="#Horarios">Horarios</a></li>
+                <li><a href="#Promociones">Promociones</a></li>
+                <li><a href="#tablero-zona">Bandeja de Compras</a></li>
+                <li><a href="#Pedidos">Realiza tu pedido</a></li>
+                <li><a href="#panel">Preguntas y Avisos</a></li>
+                <li><a href="#Contactos">Contáctanos</a></li>
+                <li><a href="admin.html">⚙️ Panel Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Productos">
+            <h2>Catálogo de Productos y Servicios</h2>
+            <p class="seccion-bajada" style="color: var(--color-suave); margin-top: -0.5rem; margin-bottom: 1rem;">
+                Explora nuestras categorías con fotos reales o busca directamente útiles escolares, peluches y
+                servicios.
+            </p>
+
+            <div class="controles">
+                <label for="buscador" class="visualmente-oculto">Buscar productos</label>
+                <input type="search" id="buscador" placeholder="Buscar útiles, peluches, regalos, servicios..."
+                    autocomplete="off">
+                <div id="filtros">
+                    <button type="button" class="activo" data-categoria="todos">📂 Todas las Categorías</button>
+                    <button type="button" data-categoria="escolares">📚 Escolares y Papelería</button>
+                    <button type="button" data-categoria="regalos">🎁 Regalos y Peluches</button>
+                    <button type="button" data-categoria="cosmeticos">💄 Cosméticos</button>
+                    <button type="button" data-categoria="internet">💻 Internet y Servicios</button>
+                </div>
+                <p id="resultado" aria-live="polite"></p>
+            </div>
+
+            <!-- Contenedor dinámico donde render.js pinta los cuadros de categorías o las tarjetas -->
+            <div id="lista-productos"></div>
+        </section>
+
+        <section id="Regalos">
+            <h2>Regalos y Detalles Destacados</h2>
+            <div class="galeria-regalos">
+                <article>
+                    <img src="imagenes/peluches_stitch_capibara.jpg" alt="Peluches tiernos de Stitch, Snoopy y Capibara"
+                        class="img-articulo">
+                    <h3>Peluches de Stitch, Snoopy y Capibaras</h3>
+                    <p>Colección especial de peluches suaves y tiernos: Stitch, Snoopy clásico y Capibaras con
+                        mochilita.</p>
+                </article>
+
+                <article>
+                    <img src="imagenes/peluche_regalo.jpg" alt="Osos de peluche gigantes para regalo"
+                        class="img-articulo">
+                    <h3>Osos de Peluche Gigantes y Medianos</h3>
+                    <p>Peluches con lazos y corazones en variados tamaños, ideales para toda ocasión especial.</p>
+                </article>
+
+                <article>
+                    <img src="imagenes/collares_portafotos.jpg" alt="Collares dúo magnéticos y portafotos decorativos"
+                        class="img-articulo">
+                    <h3>Collares Dúo, Portafotos y Tazas</h3>
+                    <p>Collares magnéticos de parejas, marcos decorativos de madera, tazas y tomatodos.</p>
+                </article>
+
+                <article>
+                    <img src="imagenes/cosmeticos_perfumes.jpg" alt="Perfumes y cosméticos seleccionados"
+                        class="img-articulo">
+                    <h3>Perfumes, Maquillaje y Accesorios</h3>
+                    <p>Variedad en fragancias, paletas de sombras, delineadores, labiales y accesorios.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="Promociones">
+            <h2>Ofertas y Promociones</h2>
+            <article>
+                <h3>Viernes 2x1 en máquinas</h3>
+                <p>Ven a jugar con tus amigos: los viernes paga una máquina y juegan dos.</p>
+            </article>
+
+            <article>
+                <h3>Promo cumpleaños</h3>
+                <p>Si es tu cumpleaños, presenta tu cédula de identidad y disfruta de una máquina gratis.</p>
+            </article>
+
+            <figure>
+                <img src="imagenes/internet_gaming.jpg" alt="Zona de juegos e internet en Level Up Store" width="700"
+                    height="394">
+                <figcaption>Sala de Internet de alta velocidad y videojuegos en red en Colquencha</figcaption>
+            </figure>
+        </section>
+
+        <!-- En la sección de Horarios: agregar botón y el dialog modal -->
+        <section id="Horarios">
+            <h2>Horarios de Atención</h2>
+            <article>
+                <h3>Domingos a Jueves</h3>
+                <p>Desde las 14:00 hasta las 22:00</p>
+            </article>
+
+            <article>
+                <h3>Viernes y Sábados</h3>
+                <p>Desde las 17:00 hasta las 21:00</p>
+            </article>
+
+            <button type="button" id="abrir-dialogo-horarios" style="margin-top: 1rem;">
+                🕒 Ver detalles de apertura y días feriados
+            </button>
+
+            <!-- Diálogo modal nativo contextualizado -->
+            <dialog id="dialogo-horarios" aria-labelledby="titulo-dialogo">
+                <div class="dialogo-contenido">
+                    <h3 id="titulo-dialogo">Horarios de Atención &mdash; Level Up Store</h3>
+                    <p><strong>Ubicación:</strong> Colquencha, cerca de la plaza principal, La Paz - Bolivia.</p>
+                    <ul style="padding-left: 1.2rem; color: var(--color-texto);">
+                        <li><strong>Dom a Jue:</strong> 14:00 &ndash; 22:00 (Internet, trámites y papelería)</li>
+                        <li><strong>Vie y Sáb:</strong> 17:00 &ndash; 21:00 (Zona Gamer 2x1 y regalos)</li>
+                        <li><strong>Feriados y fechas festivas:</strong> Atención bajo reserva previa por WhatsApp al 74090398.</li>
+                    </ul>
+                    <button type="button" id="cerrar-dialogo-horarios" style="margin-top: 1rem; width: 100%;">
+                        Entendido / Cerrar
+                    </button>
+                </div>
+            </dialog>
+        </section>
+
+        <section id="tablero-zona">
+            <h2>🛒 Bandeja de Compras (Pedido de varios artículos)</h2>
+            <p>Selecciona los productos desde el listado disponible para añadirlos a tu bandeja y encargar todo junto.
+            </p>
+
+            <div id="tablero" class="tablero-bandeja-layout">
+                <div class="columna columna-disponibles" data-columna="disponibles">
+                    <div class="columna-encabezado">
+                        <h3>📦 Artículos disponibles</h3>
+                        <input type="search" id="filtro-disponibles" placeholder="Filtrar..."
+                            aria-label="Filtrar productos disponibles" autocomplete="off">
+                    </div>
+                    <ul class="lista-columna lista-deslizable"></ul>
+                    <p class="total"></p>
+                </div>
+
+                <div class="columna columna-carrito" data-columna="pedido">
+                    <div class="columna-encabezado">
+                        <h3>🛍️ Tu Carrito / Bandeja</h3>
+                        <button type="button" id="vaciar-bandeja" class="btn-limpiar-bandeja">Vaciar</button>
+                    </div>
+                    <ul class="lista-columna lista-carrito"></ul>
+                    <div class="pie-bandeja">
+                        <p class="total"></p>
+                        <div class="acciones-bandeja">
+                            <button type="button" id="confirmar-bandeja" class="btn-confirmar-bandeja">
+                                📝 Llevar pedido al formulario
+                            </button>
+                            <button type="button" id="whatsapp-bandeja" class="btn-wsp-bandeja">
+                                💬 Pedir bandeja por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="grafico" width="600" height="220">
+                Gráfico de los totales en la bandeja de compras por categoría.
+            </canvas>
+        </section>
+
+        <section id="Pedidos">
+            <h2>Hacer un pedido anticipado</h2>
+            <form action="/Pedidos" method="post">
+                <fieldset>
+                    <legend>Tus datos</legend>
+                    <p>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </p>
+                    <p>
+                        <label for="email">Correo electrónico (opcional)</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                    </p>
+                    <p>
+                        <label for="telefono">Teléfono / WhatsApp</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="[0-9]{7,8}"
+                            title="7 u 8 dígitos, sin espacios" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu pedido</legend>
+                    <p>
+                        <label for="producto-pedido">Artículo o Servicio solicitado</label>
+                        <select id="producto-pedido" name="Productos" required>
+                            <option value="">-- Elige un artículo del catálogo --</option>
+                            <option value="Pedido de varios productos (Bandeja)" id="opcion-bandeja">🛒 Pedido de varios
+                                productos (según Bandeja)</option>
+                            <optgroup label="📚 Escolares y Papelería">
+                                <option value="Cuadernos empastados tamaño carta">Cuadernos empastados carta (Bs 18.00)
+                                </option>
+                                <option value="Cuadernos empastados tamaño oficio">Cuadernos empastados oficio (Bs
+                                    24.00)</option>
+                                <option value="Bolígrafos Sabonis punta fina">Bolígrafos Sabonis punta fina (Bs 1.50)
+                                </option>
+                                <option value="Marcadores Sabonis x12 colores al agua">Marcadores Sabonis x12 (Bs 25.00)
+                                </option>
+                                <option value="Hojas Bond tamaño carta 75g">Hojas Bond carta 500hjs (Bs 35.00)</option>
+                            </optgroup>
+                            <optgroup label="🎁 Regalos y Novedades">
+                                <option value="Peluche tierno de Stitch">Peluche de Stitch (Bs 45.00)</option>
+                                <option value="Peluche de Capibara con mochilita">Peluche de Capibara (Bs 48.00)
+                                </option>
+                                <option value="Osos de peluche gigantes (1 metro)">Oso de peluche gigante (Bs 180.00)
+                                </option>
+                                <option value="Portafotos decorativos">Portafotos decorativo (Bs 15.00)</option>
+                            </optgroup>
+                            <optgroup label="💄 Cosméticos y Belleza">
+                                <option value="Paletas de maquillaje">Paleta de maquillaje (Bs 22.00)</option>
+                                <option value="Perfumes seleccionados">Perfumes (Bs 28.00)</option>
+                                <option value="Collares dúo magnéticos">Collares dúo parejas (Bs 35.50)</option>
+                            </optgroup>
+                            <optgroup label="💻 Internet y Servicios">
+                                <option value="1 hora de Internet de alta velocidad">1 hora de Internet (Bs 2.00)
+                                </option>
+                                <option value="PC Gamer 1 hora">1 hora PC Gamer (Bs 3.00)</option>
+                                <option value="Impresiones a color">Impresiones a color (Bs 2.00)</option>
+                                <option value="Fotocopias blanco y negro">Fotocopias b/n (Bs 0.50)</option>
+                            </optgroup>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="cantidad">Cantidad</label>
+                        <input type="number" id="cantidad" name="cantidad" min="1" max="100" value="1" required>
+                    </p>
+
+                    <p>
+                        <label for="fecha">Fecha de entrega</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </p>
+
+                    <p>
+                        <label for="notas">Indicaciones adicionales</label>
+                        <textarea id="notas" name="notas" rows="3"></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="terminos" name="terminos">
+                        <label for="terminos">Deseo confirmar el pedido vía WhatsApp o llamada (opcional)</label>
+                    </p>
+                </fieldset>
+                <p id="estado-pedido" class="mensaje-estado" role="status" aria-live="polite" hidden></p>
+                <button type="submit">Enviar pedido</button>
+            </form>
+        </section>
+        <section id="panel">
+            <h2>Preguntas Frecuentes y Avisos</h2>
+            <p class="seccion-bajada" style="color: var(--color-suave); margin-top: -0.5rem; margin-bottom: 1.25rem;">
+                Respuestas a dudas habituales sobre pedidos anticipados, entregas en Colquencha y novedades de Level Up Store.
+            </p>
+
+            <!-- ACORDEÓN INTERACTIVO (JQUERY)
+                Despliegue exclusivo: al abrir una pregunta, las demás se repliegan automáticamente.
+                aria-expanded comunica a tecnologías de asistencia si cada respuesta está abierta. -->
+            <div id="acordeon">
+                <div class="item">
+                    <button type="button" class="titulo" aria-expanded="false">
+                        <span>¿Cómo realizo un pedido por encargo o reserva de útiles?</span>
+                        <span class="icono-flecha" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="cuerpo" hidden>
+                        <p>Puedes agregar tus productos a la <strong>Bandeja de Compras</strong> y enviarla directamente por WhatsApp, o completar el formulario de pedidos indicando la fecha de entrega. También preparamos listas escolares completas.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <button type="button" class="titulo" aria-expanded="false">
+                        <span>¿Hacen entregas en Colquencha?</span>
+                        <span class="icono-flecha" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="cuerpo" hidden>
+                        <p>Sí, coordinamos entregas personales en la plaza principal de Colquencha y zonas cercanas sin costo adicional, previa confirmación por WhatsApp o llamada.</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <button type="button" class="titulo" aria-expanded="false">
+                        <span>¿Qué formas de pago aceptan?</span>
+                        <span class="icono-flecha" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="cuerpo" hidden>
+                        <p>Aceptamos pagos en efectivo en nuestro local y transferencias bancarias mediante <strong>código QR</strong> (Banco Unión, BCP, BNB y billeteras móviles).</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <button type="button" class="titulo" aria-expanded="false">
+                        <span>¿Qué servicios de internet, impresión y juegos ofrecen?</span>
+                        <span class="icono-flecha" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="cuerpo" hidden>
+                        <p>Disponemos de PCs de alta velocidad para navegación y trabajos estudiantiles, zona gamer en red (con promo 2x1 los viernes), impresiones a color, fotocopias nítidas y anillados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABLÓN DE AVISOS Y NOVEDADES (JQUERY)
+                Aparición escalonada animada con delay() y alternancia mostrar/ocultar. -->
+            <div class="panel-avisos-contenedor">
+                <button type="button" id="mostrar-avisos">Mostrar avisos</button>
+                <ul id="avisos">
+                    <li hidden>🧸 <strong>Novedad en Regalos:</strong> Llegaron peluches de Stitch, Snoopy y Capibaras con mochilita.</li>
+                    <li hidden>🎮 <strong>Promo Viernes:</strong> Paga una sola máquina de internet/juegos y juegan dos amigos (2x1).</li>
+                    <li hidden>📚 <strong>Material Escolar:</strong> Hojas bond carta y oficio disponibles por mayor y menor.</li>
+                    <li hidden>🎂 <strong>Promo Cumpleaños:</strong> Si es tu cumpleaños, presenta tu carnet y recibe 1 hora de máquina gratis.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Barra lateral con la ubicación encima de ¿Sabías? -->
+    <aside>
+        <section id="ubicacion">
+            <h2>¿Estás cerca?</h2>
+            <p>Calcula tu distancia en tiempo real hasta nuestro local en Colquencha.</p>
+            <button type="button" id="ubicarme">📍 Medir mi distancia</button>
+            <p id="estado-ubicacion" role="status" aria-live="polite"></p>
+        </section>
+
+        <div class="bloque-sabias">
+            <h2>¿Sabías?</h2>
+            <p>Jugar en la PC y realizar trabajos digitales ayuda a mejorar tu velocidad de dactilografía, reflejos y
+                coordinación mano-ojo.</p>
+        </div>
+    </aside>
+
+    <footer id="Contactos">
+        <div class="footer-grid">
+            <div class="footer-bloque">
+                <h2 class="footer-titulo">📍 Ubicación y Horarios</h2>
+                <address>
+                    <p>📌 Colquencha, cerca de la plaza principal</p>
+                    <p>🏙️ La Paz, Bolivia</p>
+                    <p>📞 <a href="tel:+59174090398">740 903 98</a></p>
+                    <p>🕐 Dom – Jue: 14:00 – 22:00</p>
+                    <p>🕔 Vie – Sáb: 17:00 – 21:00</p>
+                </address>
+            </div>
+
+            <div class="footer-bloque">
+                <h3 class="footer-titulo">✨ Redes Sociales</h3>
+                <div class="redes-sociales">
+                    <a href="https://wa.me/59174090398" target="_blank" rel="noopener" class="red-social red-whatsapp"
+                        aria-label="Escríbenos por WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="red-social red-facebook"
+                        aria-label="Facebook">
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="red-social red-instagram"
+                        aria-label="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="red-social red-tiktok"
+                        aria-label="TikTok">
+                        <span>TikTok</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bloque">
+                <h3 class="footer-titulo">⚡ Servicios</h3>
+                <ul class="footer-lista">
+                    <li>📚 Materiales y papelería</li>
+                    <li>💻 Internet de alta velocidad</li>
+                    <li>🎮 Zona PC Gamer en red</li>
+                    <li>🖨️ Impresiones y fotocopias</li>
+                    <li>🎁 Peluches y regalos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-copy">
+            <p><small>&copy; 2026 Level Up Store &mdash; Colquencha, La Paz, Bolivia</small></p>
+        </div>
+    </footer>
+
+    <!-- Scripts del proyecto -->
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script src="datos.js"></script>
+    <script src="preferencias.js"></script>
+    <script src="render.js"></script>
+    <script src="eventos.js"></script>
+    <script src="tablero.js"></script>
+    <script src="jquery-panel.js"></script>
+    <script src="navegacion.js"></script>
+</body>
+
+</html>
